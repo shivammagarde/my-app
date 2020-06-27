@@ -7,25 +7,27 @@ import { DISHES } from './shared/dishes';
 
 class App extends Component {
 
-  constructor(props) {
-    super(props);
+constructor(props) {
 
-    this.state = {
-      dishes: DISHES
-    };
-  }
+	super(props);
 
-  render() {
-    return (
-      <div>
-        <Navbar dark color="primary">
-          <div className="container">
-            <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
-          </div>
-        </Navbar>
-      <Menu dishes={this.state.dishes} />
-      </div>
-    );
-  }
+	this.state = {
+		dishes: DISHES
+	};
+
+}
+
+render() {
+	return (
+			<div>
+				<Navbar dark color="primary">
+					<div className="container">
+						<NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
+					</div>
+				</Navbar>
+				<Menu dishes={this.state.dishes} />
+			</div>
+		);
+	}
 }
 export default App;
